@@ -1,0 +1,25 @@
+.loginleftcomponent__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginleftcomponent__spanbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginleftcomponent__spanbox :nth-child(2) {
+  margin-right: 5%;
+}
+
+.loginleftcomponent__form--label {
+  color: #121625;
+}
+
+.loginleftcomponent__title--span {
+  color: #32d4a4;
+}
+
+.loginleftcomponent__btn {
+  background-color: #32d4a4;
+}

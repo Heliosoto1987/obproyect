@@ -1,0 +1,12 @@
+.studentdata__labels {
+  background-color: #32d4a4;
+  color: #ffffff;
+  width: fit-content;
+  font-weight: bold;
+  height: 14px;
+  font-size: 12px;
+}
+
+.border {
+  border: ridge 0.1px;
+}

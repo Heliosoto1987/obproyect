@@ -10,8 +10,8 @@ import { LoginRigthSide } from './components/LoginRigthSide'
 export const LoginScreen = () => {
     return (
         <div className='loginscreen'>
-            <div className='login__left'><LoginLeftSide /></div>
-            <div className='login__rigth'><LoginRigthSide /></div>
+            <div><LoginLeftSide /></div>
+            <div><LoginRigthSide /></div>
         </div>
     )
 }

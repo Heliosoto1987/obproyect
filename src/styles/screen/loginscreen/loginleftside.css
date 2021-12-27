@@ -1,25 +1,117 @@
-.loginleftcomponent__form {
+.loginleftcomponent {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 5%;
 }
-
-.loginleftcomponent__spanbox {
-  display: flex;
-  justify-content: space-between;
-}
-
-.loginleftcomponent__spanbox :nth-child(2) {
-  margin-right: 5%;
-}
-
-.loginleftcomponent__form--label {
+.loginleftcomponent__title {
   color: #121625;
+  font-weight: lighter;
 }
 
 .loginleftcomponent__title--span {
   color: #32d4a4;
 }
 
+.loginleftcomponent__form {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-around;
+}
+
+.loginleftcomponentform__box {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.loginleftcomponentform__box :nth-child(2) {
+  margin-top: 10px;
+}
+
+.loginleftcomponent__spanbox :nth-child(2) {
+  color: #32d4a4;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  font-weight: bold;
+}
+
+.loginleftcomponentform__box--label {
+  color: #121625;
+}
+
+.loginleftcomponentform__box--input {
+  background-color: #f8f8f9;
+  height: 40px;
+  width: 450px;
+  padding: 12px, 15px, 12px, 15px;
+  border-style: none;
+}
+
+.loginleftcomponentform__box--input::placeholder {
+  color: #a5a8b3;
+}
+
+.loginleftcomponent__spanbox {
+  display: flex;
+  justify-content: space-between;
+  width: 405px;
+}
+
 .loginleftcomponent__btn {
   background-color: #32d4a4;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  height: 40px;
+  line-height: 18px;
+  padding: 5px, 14px, 5px, 10px;
+  width: 450px;
+  max-width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .loginleftcomponent {
+    height: 80vh;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .loginleftcomponent {
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .loginleftcomponent__title {
+    margin-bottom: 10vh;
+  }
+
+  .loginleftcomponentform__box--input::placeholder {
+    text-align: center;
+  }
+
+  .loginleftcomponent__spanbox {
+    margin-left: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .loginleftcomponentform__box {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+  }
+
+  .loginleftcomponent__btn {
+    width: 200px;
+    align-self: center;
+  }
 }

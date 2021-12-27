@@ -1,0 +1,98 @@
+.studenttable {
+  width: 1920px;
+}
+
+.studenttable__header {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.studenttable__header--title {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.studenttable__header--name {
+  margin-right: 40px;
+}
+
+/* studenttable__main */
+
+.studenttable__main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.studenttable__mainstudents {
+  height: 750px;
+  width: 1346px;
+}
+
+.studenttable__main--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.studenttable__mainheader--firstbox :first-child {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 24px;
+}
+
+.studenttable__mainheader--firstbox :nth-child(2) {
+  background-color: #e6e6ea;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 343px;
+  padding: 12px;
+}
+.studenttable__mainheader--firstbox :nth-child(2)::placeholder {
+  color: #8c909c;
+  width: 283px;
+  height: 16px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.studenttable__main--button {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e6e6ea;
+  border-radius: 8px;
+  display: flex;
+  height: 40px;
+  margin: 0px 15px;
+  padding: 5px 14px 5px 10px;
+  width: 168px;
+}
+
+.fa-search {
+  background-color: #e6e6ea;
+}
+
+.studenttable__mainfilter {
+  width: 330px;
+  height: 647px;
+  background-color: blue;
+}
+
+.studenttable__mainsortfield {
+  align-items: center;
+  display: grid;
+  font-family: Raleway;
+  font-size: 11px;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 40px;
+  line-height: 13px;
+  width: 1346px;
+}

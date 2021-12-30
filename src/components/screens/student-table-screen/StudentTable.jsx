@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //styles
 import "../../../styles/screen/student-table/student-table.css";
 //components
+import { AddStudents } from "../add-students-screen/AddStudents";
 import { StudentFilter } from "./StudentFIlter";
 import { StudentData } from "./StudentData";
 //hooks
@@ -61,6 +62,7 @@ const filterByValue = (value, inputchange) =>
 
 export const StudentTable = () => {
   const [data, setData] = useState(rawData);
+  const [isOpen, setIsOpen] = useState(false);
   const [formValues, handleInputChange] = useForm({
     inputChange: "",
     inputChangeLabels: "",
@@ -103,6 +105,9 @@ export const StudentTable = () => {
         etiquetas={value.etiquetas}
       />
     ));
+  const handleAddStudent = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="student-table">
@@ -129,7 +134,10 @@ export const StudentTable = () => {
                 value={inputChange}
               />
             </div>
-            <button className="student-table__main--button">
+            <button
+              onClick={handleAddStudent}
+              className="student-table__main--button"
+            >
               + Añadir alumnos
             </button>
           </header>
@@ -208,6 +216,7 @@ export const StudentTable = () => {
           <StudentFilter inputChangeLabel={inputChangeLabels} />
         </div>
       </div>
+      <AddStudents isOpen={isOpen} />
     </div>
   );
 };

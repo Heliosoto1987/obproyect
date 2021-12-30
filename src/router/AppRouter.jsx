@@ -2,6 +2,7 @@ import React from "react";
 //router
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 //components
+import { AddStudents } from "../components/screens/add-students-screen/AddStudents";
 import { LoginScreen } from "../components/screens/login-screen/LoginScreen";
 import { StudentTable } from "../components/screens/student-table-screen/StudentTable";
 
@@ -11,6 +12,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<LoginScreen />} />
         <Route path="/table" element={<StudentTable />} />
+        <Route path="/AddStudents" element={<AddStudents />} />
       </Routes>
     </BrowserRouter>
   );

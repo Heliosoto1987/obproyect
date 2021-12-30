@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 //stlyes
 import "../../../../styles/screen/login-screen/loginleftside.css";
 
-export const LoginLeftSide = (history) => {
+export const LoginLeftSide = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {

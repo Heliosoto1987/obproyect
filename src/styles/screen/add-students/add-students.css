@@ -42,29 +42,11 @@
   flex-direction: column;
 }
 
-.modaltitle {
-  text-align: center;
+.add-students__flex {
+  display: flex;
 }
 
-.filterbutton {
-  margin: 2px;
-}
-
-.filterbutton :hover {
-  border: 2px solid;
-  font-size: 1.1rem;
-}
-
-.filterbutton:focus {
-  background-color: black;
-  color: wheat;
-}
-
-.saveButtonModal {
-  align-self: flex-end;
-}
-
-.filterbutton__reset {
-  font-size: 1.2rem;
-  font-weight: bold;
+.add-students__left-form {
+  display: flex;
+  flex-direction: column;
 }

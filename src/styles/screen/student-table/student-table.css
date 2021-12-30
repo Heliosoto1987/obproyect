@@ -1,49 +1,59 @@
-.studenttable {
+.student-table {
   width: 1920px;
 }
 
-.studenttable__header {
+.student-table__header {
   align-items: center;
   display: flex;
   height: 70px;
   justify-content: space-between;
 }
 
-.studenttable__header--title {
+.student-table__header--title {
   display: flex;
   justify-content: space-between;
   margin-left: 40px;
 }
 
-.studenttable__header--name {
+.student-table__header--circle {
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  top: 0px;
+  border-radius: 59px;
+  padding: 10px;
+  background: #121625;
+  color: #515561;
+}
+.student-table__header--name {
   margin-right: 40px;
 }
 
-/* studenttable__main */
-
-.studenttable__main {
+/* student-table__main */
+.student-table__main {
   display: flex;
   justify-content: space-around;
+  margin-top: 68px;
 }
 
-.studenttable__mainstudents {
+.student-table__mainstudents {
   height: 750px;
   width: 1346px;
 }
 
-.studenttable__main--header {
+.student-table__main--header {
   display: flex;
   justify-content: space-between;
 }
 
-.studenttable__mainheader--firstbox :first-child {
+.student-table__mainheader--firstbox :first-child {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   margin-right: 24px;
 }
 
-.studenttable__mainheader--firstbox :nth-child(2) {
+.student-table__mainheader--firstbox :nth-child(2) {
   background-color: #e6e6ea;
   border: none;
   border-radius: 8px;
@@ -51,7 +61,7 @@
   width: 343px;
   padding: 12px;
 }
-.studenttable__mainheader--firstbox :nth-child(2)::placeholder {
+.student-table__mainheader--firstbox :nth-child(2)::placeholder {
   color: #8c909c;
   width: 283px;
   height: 16px;
@@ -63,7 +73,7 @@
   font-feature-settings: "pnum" on, "lnum" on;
 }
 
-.studenttable__main--button {
+.student-table__main--button {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #e6e6ea;
@@ -74,18 +84,15 @@
   padding: 5px 14px 5px 10px;
   width: 168px;
 }
-
-.fa-search {
-  background-color: #e6e6ea;
+.student-table__mainsortfield--btn {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: white;
+  color: #a5a8b3;
 }
 
-.studenttable__mainfilter {
-  width: 330px;
-  height: 647px;
-  background-color: blue;
-}
-
-.studenttable__mainsortfield {
+.student-table__mainsortfield {
   align-items: center;
   display: grid;
   font-family: Raleway;
@@ -95,4 +102,23 @@
   height: 40px;
   line-height: 13px;
   width: 1346px;
+  color: #a5a8b3;
+}
+
+.studentdata {
+  align-items: center;
+  display: grid;
+  font-family: Raleway;
+  font-size: 11px;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 40px;
+  line-height: 13px;
+  width: 1346px;
+}
+
+.student-table__mainfilter {
+  width: 330px;
+  height: 647px;
+  background-color: #ffffff;
 }

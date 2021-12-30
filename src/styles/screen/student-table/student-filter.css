@@ -1,0 +1,70 @@
+.student-filter__title {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-trash-alt {
+  color: #32d4a4;
+  width: 15px;
+  height: 16.67px;
+  font-size: 18px;
+  line-height: 21.13px;
+  font-weight: 700;
+}
+
+.student-filter__form {
+  margin-top: 28px;
+}
+
+.student-filter__labels {
+  height: 16px;
+  width: 282px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.student-filter__input {
+  height: 40px;
+  width: 282px;
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 12px, 15px, 12px, 15px;
+  background-color: #f8f8f9;
+  border: none;
+}
+
+.student-filter__select {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  width: 282px;
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  background-color: #f8f8f9;
+}
+
+.student-filter__checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-filter__checkbox__label {
+  height: 16px;
+  width: 282px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+.student-filter__checkbox__label:nth-child(1) {
+  margin-top: 30px;
+}
+
+.student-filter__checkbox--span {
+  margin-left: 13px;
+  font-size: 15px;
+}

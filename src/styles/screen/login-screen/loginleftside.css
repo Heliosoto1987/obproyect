@@ -8,6 +8,11 @@
 .loginleftcomponent__title {
   color: #121625;
   font-weight: lighter;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
 }
 
 .loginleftcomponent__title--span {

@@ -16,7 +16,7 @@ export const AddStudents = ({
   setFilterValue,
 }) => {
   const closeModal = () => {
-    setIsOpen(false);
+    setIsOpen(isOpen);
   };
   return (
     <Modal
@@ -31,10 +31,12 @@ export const AddStudents = ({
         <form className="add-students__left-form">
           <label htmlFor="fullNameModal">Nombre y Apellidos</label>
           <input type="text" name="fullNameModal" />
-          <label htmlFor="countryModal">Pais</label>
-          <select name="countryModal"></select>
-          <label htmlFor="cityModal">Ciudad</label>
-          <select name="cityModal"></select>
+          <div>
+            <label htmlFor="countryModal">Pais</label>
+            <select name="countryModal"></select>
+            <label htmlFor="cityModal">Ciudad</label>
+            <select name="cityModal"></select>
+          </div>
           <label htmlFor="phoneModal">Nº Telefono</label>
           <input type="text" name="phoneModal" />
           <label htmlFor="emailModal">Nombre y Apellidos</label>
@@ -44,7 +46,7 @@ export const AddStudents = ({
           <label htmlFor="transfer">Presencialidad</label>
           <input type="text" name="transfer" />
         </form>
-        <form>
+        <form className="add-students__right-form">
           <label htmlFor="">Foto de perfil</label>
           <input type="file" />
           <label htmlFor="">Documento CV</label>

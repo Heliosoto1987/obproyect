@@ -49,4 +49,11 @@
 .add-students__left-form {
   display: flex;
   flex-direction: column;
+  min-width: 50%;
+}
+
+.add-students__right-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
 }

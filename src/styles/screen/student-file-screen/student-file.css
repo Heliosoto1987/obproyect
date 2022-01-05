@@ -1,0 +1,207 @@
+.student-file-screen {
+  display: flex;
+  width: 1920px;
+  height: 900px;
+  background: #e5e5e5;
+}
+
+.student-file-screen__nav {
+  display: flex;
+  justify-content: space-between;
+  background: #e5e5e5;
+  height: 70px;
+  width: 1920px;
+  border-radius: 0px;
+  padding: 20px 50px;
+}
+
+.student-file-screen__nav--back {
+  margin: 12.5px;
+}
+
+.student-file-screen__nav--circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 59px;
+  padding: 10px;
+  background: #121625;
+  color: #515561;
+}
+
+.student-file-screen__left {
+  border-radius: 20px;
+  height: 784px;
+  padding: 24px;
+  width: 500px;
+  margin-top: 40px;
+  margin-left: 110px;
+  margin-right: 40px;
+  background: #ffffff;
+}
+.student-file-screen__left__header {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+
+.student-file-screen__left__header--picture {
+  height: 90px;
+  width: 90px;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.student-file-screen__left--box {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-file-screen__left__header--title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px;
+  color: 121625;
+}
+
+.student-file-screen__left__header--subtitle {
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a5a8b3;
+}
+
+.fa-map-marker-alt {
+  color: #8c909c;
+  font-size: 10px;
+}
+
+.student-file-screen__form--input {
+  height: 40px;
+  width: 452px;
+  border-radius: 8px;
+  padding-left: 15px;
+  margin-bottom: 33px;
+}
+
+.student-file-screen__left__header--picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.student-file-screen__form--box {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-file-screen__form--fixed {
+  display: flex;
+}
+
+.fas2 {
+  color: black !important;
+}
+
+.student-file-screen__left-footer--label {
+  height: 24px;
+  width: 103px;
+  border-radius: 20px;
+  padding: 3px, 6px, 3px, 10px;
+  background: white;
+  margin: 5px;
+}
+
+.student-file-screen__form--inputs {
+  background: #f8f8f9;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  padding: 12px, 15px, 12px, 15px;
+  width: 214px;
+  padding-left: 15px;
+  border: none;
+}
+
+.student-file-screen__form--inputs {
+  margin-right: 24px;
+  margin-bottom: 12px;
+}
+
+.student-file-screen__form--labels {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.student-file-screen__form--fake-btn {
+  background: #a5a8b3;
+  border-radius: 8px;
+  height: 40px;
+  padding: 5px, 14px, 5px, 10px;
+  width: 163px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 15px;
+  padding-left: 11.75px;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+.fa-arrow-circle-up {
+  padding-right: 11.75px;
+}
+
+.student-file-screen__form--delete {
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 12px;
+  padding: 5px, 14px, 5px, 10px;
+  width: 101px;
+}
+
+.fa-trash-alt {
+  padding: 0 12.62;
+  font-size: 12px !important;
+}
+
+.student-file-screen__left-footer--label-container {
+  border-radius: 20px;
+  padding: 6px;
+  background: #e6e6ea;
+  margin: 6px;
+  font-size: 12px;
+}
+
+.fa-times {
+  color: #a5a8b3;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+/*right container */
+.student-file-screen__pdf {
+  width: 1176px;
+  max-height: 749.97;
+  border-radius: 0px;
+  margin-bottom: 15px;
+  margin-right: 102px;
+  margin-top: 40px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}

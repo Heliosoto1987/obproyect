@@ -6,8 +6,11 @@ import "../../../styles/screen/student-table/student-table.css";
 import { AddStudents } from "../add-students-screen/AddStudents";
 import { StudentFilter } from "./StudentFIlter";
 import { StudentData } from "./StudentData";
+import { SortSelect } from "./SortSelect";
+import { useForm } from "../../../hooks/useForm";
+//router
+import { useNavigate } from "react-router-dom";
 //hooks
-import { useForm } from "../../hooks/useForm";
 
 const rawData = [
   {
@@ -76,6 +79,13 @@ export const StudentTable = () => {
     }
     return 0;
   };
+
+  const navigate = useNavigate();
+  const handlePush = () => {
+    navigate("/sortSelect", {
+      replace: true,
+    });
+  };
   const handleRead = (e) => {
     const name = e.target.name;
     setData((prevState) => {
@@ -123,7 +133,7 @@ export const StudentTable = () => {
       </header>
       <div className="student-table__main">
         <div className="student-table__mainstudents">
-          <header className="student-table__main--header">
+          <section className="student-table__main--header">
             <div className="student-table__mainheader--firstbox">
               <label className="">Alumnos</label>
               <input
@@ -140,83 +150,18 @@ export const StudentTable = () => {
             >
               + Añadir alumnos
             </button>
-          </header>
-          <div className="student-table__mainsortfield">
-            <button
-              onClick={handleRead}
-              name="nombre"
-              className="student-table__mainsortfield--btn"
-            >
-              NOMBRE{" "}
-              <img
-                className=""
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-            <button
-              onClick={handleRead}
-              className="student-table__mainsortfield--btn"
-              name={"ciudad"}
-            >
-              CIUDAD{" "}
-              <img
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-            <button
-              onClick={handleRead}
-              className="student-table__mainsortfield--btn"
-              name={"pais"}
-            >
-              PAIS{" "}
-              <img
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-            <button
-              onClick={handleRead}
-              className="student-table__mainsortfield--btn"
-              name={"telefono"}
-            >
-              TELEFONO{" "}
-              <img
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-            <button
-              onClick={handleRead}
-              className="student-table__mainsortfield--btn"
-              name={"correo"}
-            >
-              CORREO ELECTRONICO{" "}
-              <img
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-            <button
-              onClick={handleRead}
-              className="student-table__mainsortfield--btn"
-              name={"ETIQUETAS"}
-            >
-              ETIQUETAS{" "}
-              <img
-                src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-                alt="lupa"
-              ></img>
-            </button>
-          </div>
+          </section>
+          <SortSelect handleRead={handleRead} />
           {buildRow}
         </div>
         <div className="student-table__mainfilter">
           <StudentFilter inputChangeLabel={inputChangeLabels} />
         </div>
       </div>
-      <AddStudents isOpen={isOpen} />
+      <AddStudents isOpen={isOpen} setIsOpen={setIsOpen} />
+      <button style={{ marginLeft: "100px" }} onClick={handlePush}>
+        Provisional
+      </button>
     </div>
   );
 };

@@ -17,6 +17,11 @@
 
 .student-file-screen__nav--back {
   margin: 12.5px;
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  cursor: pointer;
 }
 
 .student-file-screen__nav--circle {

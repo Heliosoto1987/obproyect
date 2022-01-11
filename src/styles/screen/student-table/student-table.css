@@ -1,39 +1,15 @@
+.main-student-table {
+  display: flex;
+  height: 100vh;
+}
 .student-table {
   width: 1920px;
-}
-
-.student-table__header {
-  align-items: center;
-  display: flex;
-  height: 70px;
-  justify-content: space-between;
-}
-
-.student-table__header--title {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 40px;
-}
-
-.student-table__header--circle {
-  height: 40px;
-  width: 40px;
-  left: 0px;
-  top: 0px;
-  border-radius: 59px;
-  padding: 10px;
-  background: #121625;
-  color: #515561;
-}
-.student-table__header--name {
-  margin-right: 40px;
 }
 
 /* student-table__main */
 .student-table__main {
   display: flex;
   justify-content: space-around;
-  margin-top: 68px;
 }
 
 .student-table__mainstudents {

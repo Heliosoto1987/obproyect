@@ -1,0 +1,60 @@
+.container-aside {
+  max-width: 198px;
+  border-radius: 0px;
+  background: #08152e;
+}
+
+.container-aside__title {
+  margin: 22.5px 35px 40.5px 20px;
+}
+.container-aside__title--open {
+  font-weight: 700;
+  line-height: 24, 65px;
+  color: #ffffff;
+}
+
+.container-aside__title--recruiter {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.container-aside__letters {
+  padding: 17px 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff80;
+}
+
+.container-aside__letters:hover {
+  background-color: #32d4a426;
+  color: white;
+}
+
+.container-aside__letters--icons {
+  color: inherit;
+  cursor: pointer;
+  padding-right: 14px;
+}
+
+.container-aside__letters--icons:hover {
+  color: inherit;
+}
+
+.container-aside__btn:hover {
+  color: inherit;
+}
+.container-aside__btn {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container-aside_letter:hover .container-aside_button {
+  font-weight: 700;
+  color: white;
+}

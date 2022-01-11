@@ -16,7 +16,9 @@ export const StudentFileScreen = () => {
       <nav className="student-file-screen__nav">
         <div>
           <i onClick={handleBack} className="fas fa-arrow-left"></i>
-          <span className="student-file-screen__nav--back">Volver</span>
+          <span onClick={handleBack} className="student-file-screen__nav--back">
+            Volver
+          </span>
         </div>
         <div>
           <span className="student-file-screen__nav--circle">NA</span>

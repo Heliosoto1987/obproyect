@@ -3,13 +3,15 @@ import React, { useState } from "react";
 //styles
 import "../../../styles/screen/student-table/student-table.css";
 //components
+import { Aside } from "../../aside/Aside";
 import { AddStudents } from "../add-students-screen/AddStudents";
+import { NavBarSearch } from "../../navbar/NavBarSearch";
 import { StudentFilter } from "./StudentFIlter";
 import { StudentData } from "./StudentData";
 import { SortSelect } from "./SortSelect";
 import { useForm } from "../../../hooks/useForm";
 //router
-import { useNavigate } from "react-router-dom";
+import { usePush } from "../../../hooks/usePush";
 //hooks
 
 const rawData = [
@@ -70,6 +72,7 @@ export const StudentTable = () => {
     inputChange: "",
     inputChangeLabels: "",
   });
+  const [handlePush] = usePush();
   const handleSort = (e, x, y) => {
     if (x[e] < y[e]) {
       return -1;
@@ -80,12 +83,6 @@ export const StudentTable = () => {
     return 0;
   };
 
-  const navigate = useNavigate();
-  const handlePush = () => {
-    navigate("/sortSelect", {
-      replace: true,
-    });
-  };
   const handleRead = (e) => {
     const name = e.target.name;
     setData((prevState) => {
@@ -120,48 +117,45 @@ export const StudentTable = () => {
   };
 
   return (
-    <div className="student-table">
-      <header className="student-table__header">
-        <h2 className="loginleftcomponent__title  student-table__header--title">
-          OpenBootcamp&nbsp;
-          <span className="loginleftcomponent__title--span"> | Alumnos</span>
-        </h2>
-        <div>
-          <span className="student-table__header--circle">NA</span>
-          <span className="student-table__header--name">UserName</span>
+    <div className="main-student-table">
+      <Aside />
+      <div className="student-table">
+        <NavBarSearch />
+        <div className="student-table__main">
+          <div className="student-table__mainstudents">
+            <section className="student-table__main--header">
+              <div className="student-table__mainheader--firstbox">
+                <label className="">Candidatos</label>
+                <input
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="Buscar por Nombre, Email o Palabra clave..."
+                  name="inputChange"
+                  value={inputChange}
+                />
+              </div>
+              <button
+                onClick={handleAddStudent}
+                className="student-table__main--button"
+              >
+                + Añadir alumnos
+              </button>
+            </section>
+            <SortSelect handleRead={handleRead} />
+            {buildRow}
+          </div>
+          <div className="student-table__mainfilter">
+            <StudentFilter inputChangeLabel={inputChangeLabels} />
+          </div>
         </div>
-      </header>
-      <div className="student-table__main">
-        <div className="student-table__mainstudents">
-          <section className="student-table__main--header">
-            <div className="student-table__mainheader--firstbox">
-              <label className="">Alumnos</label>
-              <input
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Buscar por Nombre, Email o Palabra clave..."
-                name="inputChange"
-                value={inputChange}
-              />
-            </div>
-            <button
-              onClick={handleAddStudent}
-              className="student-table__main--button"
-            >
-              + Añadir alumnos
-            </button>
-          </section>
-          <SortSelect handleRead={handleRead} />
-          {buildRow}
-        </div>
-        <div className="student-table__mainfilter">
-          <StudentFilter inputChangeLabel={inputChangeLabels} />
-        </div>
+        <AddStudents isOpen={isOpen} setIsOpen={setIsOpen} />
+        <button
+          style={{ marginLeft: "100px" }}
+          onClick={() => handlePush("sortSelect")}
+        >
+          Provisional
+        </button>
       </div>
-      <AddStudents isOpen={isOpen} setIsOpen={setIsOpen} />
-      <button style={{ marginLeft: "100px" }} onClick={handlePush}>
-        Provisional
-      </button>
     </div>
   );
 };

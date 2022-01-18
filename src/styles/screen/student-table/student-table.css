@@ -74,7 +74,7 @@
   font-family: Raleway;
   font-size: 11px;
   font-weight: bold;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   height: 40px;
   line-height: 13px;
   width: 1346px;
@@ -85,12 +85,12 @@
   align-items: center;
   display: grid;
   font-family: Raleway;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: bold;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 40px;
   line-height: 13px;
   width: 1346px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .student-table__mainfilter {

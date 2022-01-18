@@ -1,14 +1,14 @@
 import React from "react";
-import { Aside } from "../../aside/Aside";
 import { NavBarSearch } from "../../navbar/NavBarSearch";
 
 //styles
 import "../../../styles/screen/customers/customers.css";
+import { Aside } from "../../aside/Aside";
 
-export const Customers = () => {
+export const Customers = ({ history }) => {
   return (
     <div className="customers">
-      <Aside />
+      <Aside history={history} />
       <NavBarSearch />
     </div>
   );

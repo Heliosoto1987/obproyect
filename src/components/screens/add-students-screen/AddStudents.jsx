@@ -12,8 +12,9 @@ Modal.setAppElement("#root");
 export const AddStudents = ({
   isOpen,
   setIsOpen,
-  companiesFilters,
-  setFilterValue,
+  // companiesFilters,
+  // setFilterValue,
+  labels,
 }) => {
   const closeModal = () => {
     setIsOpen(!isOpen);

@@ -6,11 +6,11 @@ import "../../../styles/screen/login-screen/login-screen.css";
 import { LoginLeftSide } from "./components/LoginLeftSide";
 import { LoginRigthSide } from "./components/LoginRigthSide";
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ history }) => {
   return (
     <div className="loginscreen">
       <div>
-        <LoginLeftSide />
+        <LoginLeftSide history={history} />
       </div>
       <div>
         <LoginRigthSide />

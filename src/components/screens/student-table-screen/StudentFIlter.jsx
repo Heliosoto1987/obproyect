@@ -1,23 +1,52 @@
 //vendor
-import React from "react";
+import React, { useState } from "react";
 //styles
 import "../../../styles/screen/student-table/student-filter.css";
+//hooks
+import { useForm } from "../../../hooks/useForm";
 
-export const StudentFilter = ({ inputChangeLabels }) => {
+const labelsList = ["REACT", "HTML", "JAVASCRIPT"];
+
+export const StudentFilter = () => {
+  const [labelsBox, seTLabelsBox] = useState([]);
+  const [formValues, handleInputChange, reset] = useForm({
+    inputChangeLabel: "",
+  });
+
+  const { inputChangeLabel } = formValues;
+  const findLabel = (e) => {
+    e.preventDefault();
+    let find = inputChangeLabel.toLowerCase();
+    if (labelsList.find((value) => value.toLowerCase() === find)) {
+      seTLabelsBox((prevState) => prevState + find);
+      reset();
+    } else {
+      reset();
+    }
+  };
+
+  // const buildLabelList = () => {
+  //   if (labelsBox.length > 0) {
+  //     return labelsBox.map((element) => console.log(element));
+  //   }
+  // };
+
   return (
     <div className="student-filter">
       <div className="student-filter__title">
         Filtros de búsquedas<i className="far fa-trash-alt"></i>{" "}
       </div>
-      <form className="student-filter__form">
+      <form onSubmit={findLabel} className="student-filter__form">
         <label className="student-filter__labels">Etiquetas</label>
         <input
           className="student-filter__input"
           type="text"
           placeholder="Escribe para buscar...."
-          name="inputChangeLabels"
-          value={inputChangeLabels}
+          name="inputChangeLabel"
+          value={inputChangeLabel}
+          onChange={handleInputChange}
         />
+        <div>{labelsBox}</div>
         <div className="studentfiltelabels"></div>
         <label className="student-filter__checkbox__label">Pais</label>
         <select className="student-filter__select">
@@ -53,6 +82,7 @@ export const StudentFilter = ({ inputChangeLabels }) => {
             <span className="student-filter__checkbox--span">No</span>
           </div>
         </div>
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
   );

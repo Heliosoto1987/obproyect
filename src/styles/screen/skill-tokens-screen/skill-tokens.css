@@ -1,0 +1,9 @@
+.skill-tokens {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-tokens__box {
+  display: flex;
+}

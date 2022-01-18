@@ -10,69 +10,73 @@ import { StudentFilter } from "./StudentFIlter";
 import { StudentData } from "./StudentData";
 import { SortSelect } from "./SortSelect";
 import { useForm } from "../../../hooks/useForm";
-//router
-import { usePush } from "../../../hooks/usePush";
-//hooks
 
 const rawData = [
   {
     id: "1",
     nombre: "Helio Javier Soto",
-    ciudad: "Madrid",
+    ciudad: "Madrid,",
     pais: "España",
     telefono: "654190536",
     correo: "heliosoto17@gmail.com",
-    etiquetas: "html",
+    tecnologias: ["HTML", "REACT", "JAVASCRIPT"],
+    estado: "CONTRATADO",
   },
   {
     id: "2",
     nombre: "Carlos Alberto Jesus Marin",
-    ciudad: "Barranquilla",
+    ciudad: "Barranquilla,",
     pais: "Colombia",
     telefono: "619085133",
     correo: "Carlosal@hotmail.com",
-    etiquetas: ["html"],
+    tecnologias: ["HTML", "REACT", "JAVASCRIPT"],
+    estado: "PDTN. OFERTAS",
   },
   {
     id: "3",
     nombre: "Alejandra Soto ",
-    ciudad: "Maracaibo",
+    ciudad: "Maracaibo,",
     pais: "Venezuela",
     telefono: "621232156",
     correo: "Alejandra@hotmail.com",
-    etiquetas: ["html, css, git"],
+    tecnologias: ["HTML", "REACT", "JAVASCRIPT"],
+    estado: "PDTN. OFERTAS",
   },
   {
     id: "4",
     nombre: "Neidy Prieto",
-    ciudad: "Maracaibo",
+    ciudad: "Maracaibo,",
     pais: "Venezuela",
     telefono: "123213566",
     correo: "Neidy@hotmail.com",
-    etiquetas: ["html"],
+    tecnologias: ["HTML", "REACT", "JAVASCRIPT"],
+    estado: "PREESELECIONADO",
   },
   {
     id: "5",
     nombre: "Guido Crespo",
-    ciudad: "Miami",
+    ciudad: "Miami,",
     pais: "USA",
     telefono: "265665689",
     correo: "Guido@hotmail.com",
-    etiquetas: ["html"],
+    tecnologias: ["HTML", "REACT", "JAVASCRIPT"],
+    estado: "CONTRATADO",
   },
 ];
 
 const filterByValue = (value, inputchange) =>
   value.toLowerCase().includes(inputchange.toLowerCase());
 
-export const StudentTable = () => {
+export const StudentTable = ({ history }) => {
   const [data, setData] = useState(rawData);
   const [isOpen, setIsOpen] = useState(false);
   const [formValues, handleInputChange] = useForm({
     inputChange: "",
     inputChangeLabels: "",
   });
-  const [handlePush] = usePush();
+  const handlePush = () => {
+    history.push("/sortSelect");
+  };
   const handleSort = (e, x, y) => {
     if (x[e] < y[e]) {
       return -1;
@@ -91,17 +95,17 @@ export const StudentTable = () => {
       return copyState;
     });
   };
-  const { inputChange, inputChangeLabels } = formValues;
+  const { inputChange } = formValues;
   const buildRow = data
     .filter(
       ({ pais, nombre, correo }) =>
         filterByValue(pais, inputChange) ||
         filterByValue(nombre, inputChange) ||
-        filterByValue(correo, inputChange) ||
         filterByValue(correo, inputChange)
     )
     .map((value) => (
       <StudentData
+        history={history}
         key={value.id}
         className={"studentdata"}
         nombre={value.nombre}
@@ -110,6 +114,8 @@ export const StudentTable = () => {
         telefono={value.telefono}
         correo={value.correo}
         etiquetas={value.etiquetas}
+        tecnologias={value.tecnologias}
+        estado={value.estado}
       />
     ));
   const handleAddStudent = () => {
@@ -118,7 +124,7 @@ export const StudentTable = () => {
 
   return (
     <div className="main-student-table">
-      <Aside />
+      <Aside history={history} />
       <div className="student-table">
         <NavBarSearch />
         <div className="student-table__main">
@@ -145,14 +151,11 @@ export const StudentTable = () => {
             {buildRow}
           </div>
           <div className="student-table__mainfilter">
-            <StudentFilter inputChangeLabel={inputChangeLabels} />
+            <StudentFilter />
           </div>
         </div>
         <AddStudents isOpen={isOpen} setIsOpen={setIsOpen} />
-        <button
-          style={{ marginLeft: "100px" }}
-          onClick={() => handlePush("sortSelect")}
-        >
+        <button style={{ marginLeft: "100px" }} onClick={handlePush}>
           Provisional
         </button>
       </div>

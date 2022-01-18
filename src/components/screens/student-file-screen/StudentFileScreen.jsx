@@ -1,15 +1,11 @@
 //vendor
 import React from "react";
-import { useNavigate } from "react-router-dom";
 //styles
 import "../../../styles/screen/student-file-screen/student-file.css";
 
-export const StudentFileScreen = () => {
-  const navigate = useNavigate();
+export const StudentFileScreen = ({ history }) => {
   const handleBack = () => {
-    navigate("/table", {
-      replace: true,
-    });
+    history.push("/table");
   };
   return (
     <React.Fragment>
@@ -145,22 +141,20 @@ export const StudentFileScreen = () => {
               <input
                 className="student-file-screen__form--input"
                 placeholder="Escribe para buscar"
+                // onChange={handleFind}
               ></input>
               <div>
-                <span className="student-file-screen__left-footer--label-container">
-                  Html&CSS <i className="fas fa-times"></i>
-                </span>
-                <span className="student-file-screen__left-footer--label-container">
-                  REACT<i className="fas fa-times"></i>
-                </span>
-                <span className="student-file-screen__left-footer--label-container">
-                  Angular<i className="fas fa-times"></i>
-                </span>
+                {
+                  <span className="student-file-screen__left-footer--label-container">
+                    Html&CSS <i className="fas fa-times"></i>
+                  </span>
+                }
               </div>
             </div>
           </form>
         </div>
         <object
+          aria-label="pdf show"
           className="student-file-screen__pdf"
           type="application/pdf"
           data="https://www.plasforte.com.ar/wp-content/uploads/2018/01/muestra-1.pdf"

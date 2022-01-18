@@ -1,17 +1,12 @@
 //vendor
 import React from "react";
 //react-router
-import { useNavigate } from "react-router-dom";
 //stlyes
 import "../../../../styles/screen/login-screen/loginleftside.css";
 
-export const LoginLeftSide = () => {
-  const navigate = useNavigate();
-
+export const LoginLeftSide = ({ history }) => {
   const handleLogin = () => {
-    navigate("/table", {
-      replace: true,
-    });
+    history.push("/table");
   };
   return (
     <div className="loginleftcomponent">
@@ -57,6 +52,7 @@ export const LoginLeftSide = () => {
         <div>Copyright © 2021 Open Bootcamp SL, Imagina Group</div>
         <div>Todos los derechos reservados.</div>
         <div>Política de Privacidad</div>
+        <div>Tqm guido</div>
       </footer>
     </div>
   );

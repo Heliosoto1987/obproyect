@@ -1,3 +1,4 @@
+//vendor
 import React from "react";
 
 export const SortSelect = ({ handleRead }) => {
@@ -20,7 +21,7 @@ export const SortSelect = ({ handleRead }) => {
         className="student-table__mainsortfield--btn"
         name={"ciudad"}
       >
-        CIUDAD{" "}
+        UBICACIÓN{" "}
         <img
           src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
           alt="lupa"
@@ -31,7 +32,7 @@ export const SortSelect = ({ handleRead }) => {
         className="student-table__mainsortfield--btn"
         name={"pais"}
       >
-        PAIS{" "}
+        TELEFONO{" "}
         <img
           src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
           alt="lupa"
@@ -42,7 +43,7 @@ export const SortSelect = ({ handleRead }) => {
         className="student-table__mainsortfield--btn"
         name={"telefono"}
       >
-        TELEFONO{" "}
+        TECNOLOGÍAS{" "}
         <img
           src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
           alt="lupa"
@@ -53,22 +54,7 @@ export const SortSelect = ({ handleRead }) => {
         className="student-table__mainsortfield--btn"
         name={"correo"}
       >
-        CORREO ELECTRONICO{" "}
-        <img
-          src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-          alt="lupa"
-        ></img>
-      </button>
-      <button
-        onClick={handleRead}
-        className="student-table__mainsortfield--btn"
-        name={"ETIQUETAS"}
-      >
-        ETIQUETAS{" "}
-        <img
-          src="https://github.com/Heliosoto1987/obproyect/blob/main/public/assets/icon(1).png?raw=true"
-          alt="lupa"
-        ></img>
+        ESTADO
       </button>
     </div>
   );

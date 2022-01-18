@@ -30,10 +30,15 @@
 
 @media (max-width: 1400px) {
   .loginscreen {
+    margin-top: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30vh;
+  }
+}
+@media (max-width: 900px) {
+  .loginscreen {
+    margin-top: 10vh;
   }
 }

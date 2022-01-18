@@ -10,3 +10,39 @@
 .border {
   border: ridge 0.1px;
 }
+
+.student-data__tecnologies--items {
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  height: 22px;
+  border-radius: 6px;
+  padding: 8px;
+  background: #32d4a4;
+  align-items: center;
+  width: fit-content;
+  margin: 5px;
+  color: white;
+}
+
+.student-data__state {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.item-green {
+  background: #36e4a6;
+  color: white;
+}
+
+.item-purple {
+  background: #3684fa;
+  color: white;
+}
+
+.item-blue {
+  background: #3fcbf8;
+  color: white;
+}

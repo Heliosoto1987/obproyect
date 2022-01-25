@@ -6,4 +6,5 @@
 
 .skill-tokens__box {
   display: flex;
+  height: 100%;
 }

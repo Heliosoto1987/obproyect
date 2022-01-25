@@ -1,7 +1,10 @@
+.aside {
+  display: flex;
+  height: 100vh;
+}
+
 .dashboard {
   display: flex;
-  background-color: red;
-  height: 100vh;
 }
 
 .container-aside {

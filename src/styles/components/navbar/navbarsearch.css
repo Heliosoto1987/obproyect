@@ -1,9 +1,10 @@
 .student-table__header {
-  align-items: center;
   display: flex;
-  height: 70px;
   justify-content: space-between;
+  align-items: center;
   width: 1722px;
+  height: 70px;
+  padding: 30px 0;
 }
 
 .student-table__header--title {

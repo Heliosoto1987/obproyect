@@ -3,9 +3,7 @@ import React, { useState } from "react";
 //styles
 import "../../../styles/screen/student-table/student-table.css";
 //components
-import { Aside } from "../../aside/Aside";
 import { AddStudents } from "../add-students-screen/AddStudents";
-import { NavBarSearch } from "../../navbar/NavBarSearch";
 import { StudentFilter } from "./StudentFIlter";
 import { StudentData } from "./StudentData";
 import { SortSelect } from "./SortSelect";
@@ -124,9 +122,7 @@ export const StudentTable = ({ history }) => {
 
   return (
     <div className="main-student-table">
-      <Aside history={history} />
       <div className="student-table">
-        <NavBarSearch />
         <div className="student-table__main">
           <div className="student-table__mainstudents">
             <section className="student-table__main--header">

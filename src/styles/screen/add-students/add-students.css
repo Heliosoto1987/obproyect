@@ -37,7 +37,7 @@
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  height: 528px;
+  height: 638px;
   width: 1138px;
   left: 391px;
   top: 186px;
@@ -81,6 +81,7 @@
   margin-top: 12px;
   background: #f8f8f9;
   padding: 15px;
+  border: none;
 }
 
 .add-students__input::placeholder {
@@ -130,7 +131,6 @@
   min-width: 49%;
   margin-right: 30px;
 }
-
 .add-students__flex--box:nth-child(2) {
   margin-left: 30px;
 }
@@ -149,6 +149,7 @@
   border-radius: 8px;
   padding: 5px, 14px, 5px, 10px;
   font-size: 15px;
+  border: none;
 }
 
 .fa-cloud-upload-alt {
@@ -222,4 +223,8 @@
 
 .add-students__warning2 {
   color: #464646;
+}
+
+.add-students__modal--last-linkedin {
+  margin-top: 30px;
 }

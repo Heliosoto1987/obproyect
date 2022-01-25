@@ -139,6 +139,22 @@ export const AddStudents = ({
                     <option>Precencial</option>
                     <option>Remoto</option>
                   </select>
+                  <div className="add-students__modal--last-linkedin">
+                    {" "}
+                    <label
+                      className="add-students__modal--label"
+                      htmlFor="linkedin"
+                    >
+                      Perfil LinkedIn
+                    </label>
+                    <input
+                      id="linkedin"
+                      className="add-students__modal-select"
+                      type="text"
+                      name="linkedin"
+                      placeholder="Enlace a LinkedIn"
+                    />
+                  </div>
                 </div>
                 <div className="add-students__flex--box">
                   <label

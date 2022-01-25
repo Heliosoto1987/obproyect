@@ -1,0 +1,48 @@
+.secondbox {
+}
+
+.secondbox__main {
+  width: 785px;
+}
+
+.secondbox__header--btn {
+  background-color: white;
+  padding: 20px 30px;
+  font-size: 14px;
+  width: max-content;
+  border: none;
+}
+
+.secondbox__fix {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondbox__fix:first-child {
+  margin-top: 32px;
+}
+
+.secondbox__fix--label {
+  font-size: 14px;
+}
+
+.secondbox__fix--input {
+  background-color: #f8f8f9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 15px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 12px 0px;
+}
+
+.student-file-screen__pdf {
+  height: 100%;
+  zoom: 0.7;
+}

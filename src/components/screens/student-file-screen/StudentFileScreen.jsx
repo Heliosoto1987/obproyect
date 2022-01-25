@@ -2,25 +2,19 @@
 import React from "react";
 //styles
 import "../../../styles/screen/student-file-screen/student-file.css";
+import { SecondBox } from "./SecondBox";
 
 export const StudentFileScreen = ({ history }) => {
-  const handleBack = () => {
-    history.push("/table");
-  };
   return (
     <React.Fragment>
-      <nav className="student-file-screen__nav">
-        <div>
-          <i onClick={handleBack} className="fas fa-arrow-left"></i>
-          <span onClick={handleBack} className="student-file-screen__nav--back">
-            Volver
-          </span>
-        </div>
-        <div>
-          <span className="student-file-screen__nav--circle">NA</span>
-          <span>UserName</span>
-        </div>
-      </nav>
+      <div className="student-file-screen__bar">
+        <span className="student-file-screen__bar--first">
+          Candidatos {"<"}{" "}
+        </span>
+        <span className="student-file-screen__bar--second">
+          Nombe y Apellido
+        </span>
+      </div>
       <div className="student-file-screen">
         <div className="student-file-screen__left">
           <div className="student-file-screen__left__header">
@@ -111,6 +105,26 @@ export const StudentFileScreen = ({ history }) => {
                 />
               </div>
             </div>
+            <div className="student-file-screen__form--fixed">
+              <div className="student-file-screen__left--box ">
+                <label className="student-file-screen__form--labels">
+                  Enlace a LinkedIn
+                </label>
+                <input
+                  className="student-file-screen__form--inputs"
+                  type="text"
+                />
+              </div>
+              <div className="student-file-screen__left--box ">
+                <label className="student-file-screen__form--labels">
+                  Estado Laboral
+                </label>
+                <input
+                  className="student-file-screen__form--inputs"
+                  type="text"
+                />
+              </div>
+            </div>
             <div>
               <label
                 className="student-file-screen__form--labels"
@@ -134,31 +148,9 @@ export const StudentFileScreen = ({ history }) => {
                 </button>
               </div>
             </div>
-            <div className="student-file-screen__left-footer student-file-screen__left--box">
-              <label className="student-file-screen__form--labels">
-                Etiquetas
-              </label>
-              <input
-                className="student-file-screen__form--input"
-                placeholder="Escribe para buscar"
-                // onChange={handleFind}
-              ></input>
-              <div>
-                {
-                  <span className="student-file-screen__left-footer--label-container">
-                    Html&CSS <i className="fas fa-times"></i>
-                  </span>
-                }
-              </div>
-            </div>
           </form>
         </div>
-        <object
-          aria-label="pdf show"
-          className="student-file-screen__pdf"
-          type="application/pdf"
-          data="https://www.plasforte.com.ar/wp-content/uploads/2018/01/muestra-1.pdf"
-        ></object>
+        <SecondBox />
       </div>
     </React.Fragment>
   );
